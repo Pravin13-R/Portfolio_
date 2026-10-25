@@ -5,7 +5,7 @@ import {
   siGit, siGithub
 } from "simple-icons";
 import {
-  ArrowDown, ArrowRight, Download, Github, Linkedin, Mail, Menu, X,
+  ArrowDown, ArrowLeft, ArrowRight, Download, Github, Linkedin, Mail, Menu, X,
   ExternalLink, Code2, GraduationCap, MapPin, BriefcaseBusiness, Heart,
   Send, Layers3, Globe, Monitor, Smartphone, GitBranch, Workflow
 } from "lucide-react";
@@ -30,6 +30,7 @@ const projects = [
   {
     number: "01", title: "HireFlow Recruitment Management System", category: "Recruitment Dashboard",
     description: "A recruitment dashboard designed to organize candidate data, job pipelines, interview stages, and hiring activity in a structured workflow.",
+    features: ["Candidate data organization", "Job pipeline tracking", "Interview stage management", "Hiring activity overview"],
     tags: ["React.js", "Bootstrap", "REST API"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85",
     demo: null,
@@ -38,6 +39,7 @@ const projects = [
   {
     number: "02", title: "JobZen Job Portal", category: "Job Search Platform",
     description: "A responsive, multi-page job portal for discovering featured roles, filtering job listings, and exploring application flows.",
+    features: ["Responsive multi-page experience", "Featured role discovery", "Job listing filters", "Application flows"],
     tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85",
     demo: "https://job-portal-psi-ebon-64.vercel.app",
@@ -46,12 +48,86 @@ const projects = [
   {
     number: "03", title: "Resume Builder", category: "Productivity Tool",
     description: "A streamlined resume builder concept with structured sections, clean form inputs, and a polished preview experience for job-ready documents.",
+    features: ["Structured resume sections", "Clean form inputs", "Polished resume preview", "Job-ready document workflow"],
     tags: ["React", "CSS", "JavaScript"],
     image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1000&q=85",
     demo: null,
     github: "https://github.com/Pravin13-R/Resume-Builder"
   }
 ];
+
+function ProjectCard({ project, variants }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const frontToggleRef = React.useRef(null);
+  const backToggleRef = React.useRef(null);
+
+  const flipCard = (flipped, moveFocus = false) => {
+    setIsFlipped(flipped);
+    if (moveFocus) {
+      requestAnimationFrame(() => {
+        (flipped ? backToggleRef : frontToggleRef).current?.focus();
+      });
+    }
+  };
+
+  return (
+    <motion.article
+      className={`project-card${isFlipped ? " is-flipped" : ""}`}
+      variants={variants}
+      onMouseEnter={() => flipCard(true)}
+      onMouseLeave={() => flipCard(false)}
+    >
+      <div className="project-card-inner">
+        <button
+          className="project-face project-front"
+          type="button"
+          aria-label={`View details for ${project.title}`}
+          aria-expanded={isFlipped}
+          aria-hidden={isFlipped}
+          inert={isFlipped}
+          onClick={() => flipCard(true, true)}
+        >
+          <span className="project-image-wrap">
+            <img src={project.image} alt="" loading="lazy" />
+            <span className="project-category">{project.category}</span>
+          </span>
+          <span className="project-front-content">
+            <span className="project-title-row"><span>{project.number}</span><span className="project-front-title">{project.title}</span></span>
+            <span className="tag-list">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</span>
+            <span className="project-flip-indicator">View Details <ArrowRight size={15} /></span>
+          </span>
+        </button>
+
+        <div className="project-face project-back" aria-hidden={!isFlipped} inert={!isFlipped}>
+          <div className="project-back-heading">
+            <span className="eyebrow">PROJECT {project.number}</span>
+            <h3>{project.title}</h3>
+          </div>
+          <p className="project-description">{project.description}</p>
+          <ul className="project-features">
+            {project.features.map(feature => <li key={feature}>{feature}</li>)}
+          </ul>
+          <div className="project-back-stack">
+            <span className="project-stack-label">TECH STACK</span>
+            <div className="tag-list">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+          </div>
+          <div className="project-links">
+            <a className="button button-primary" href={project.github} target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a>
+            {project.demo && <a className="button button-secondary" href={project.demo} target="_blank" rel="noreferrer">Live Demo <ExternalLink size={15} /></a>}
+          </div>
+          <button
+            ref={backToggleRef}
+            className="project-back-toggle"
+            type="button"
+            onClick={() => flipCard(false, true)}
+          >
+            <ArrowLeft size={15} /> Back
+          </button>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
 
 function SectionHeading({ eyebrow, title, text }) {
   return <div className="section-heading">
@@ -237,30 +313,13 @@ function App() {
           </motion.div>
         </motion.section>
 
-        <motion.section className="section-wrap section-block" id="projects" {...sectionRevealProps}>
+        <motion.section className="section-wrap section-block projects-section" id="projects" {...sectionRevealProps}>
           <div className="heading-row">
             <SectionHeading eyebrow="SELECTED WORK" title="Featured Projects" text="A few projects demonstrating my frontend development practice." />
             <a className="text-link all-projects" href="https://github.com/Pravin13-R" target="_blank" rel="noreferrer">GitHub profile <ArrowRight size={16} /></a>
           </div>
           <motion.div className="projects-grid" variants={staggerRevealVariants}>
-            {projects.map((project) => <motion.article className="project-card glass-panel" key={project.number} variants={cardRevealVariants} whileHover={shouldReduceMotion ? undefined : { y: -6 }} transition={{ duration: 0.22 }}>
-              <div className="project-image-wrap">
-                <img src={project.image} alt={`${project.title} project preview`} loading="lazy" />
-                <span className="project-category">{project.category}</span>
-                <a className="image-link" href={project.github} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} GitHub`}><ExternalLink size={17} /></a>
-              </div>
-              <div className="project-content">
-                <div className="project-title-row"><span>{project.number}</span><h3>{project.title}</h3></div>
-                <p>{project.description}</p>
-                <div className="tag-list">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-                <div className="project-links">
-                  {project.demo
-                    ? <a href={project.demo} target="_blank" rel="noreferrer">Live demo <ArrowRight size={15} /></a>
-                    : <span className="project-demo-unavailable">Live demo not available</span>}
-                  <a href={project.github} target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
-                </div>
-              </div>
-            </motion.article>)}
+            {projects.map((project) => <ProjectCard key={project.number} project={project} variants={cardRevealVariants} />)}
           </motion.div>
         </motion.section>
 
