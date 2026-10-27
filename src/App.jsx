@@ -155,7 +155,7 @@ export default function App() {
     <>
       <header className="navbar">
         <a href="#home" className="logo">
-          Pravin<span>.</span>
+          Pravin<span></span>
         </a>
 
         <nav>
@@ -201,14 +201,21 @@ export default function App() {
           </div>
 
           <div className="hero-art">
-            <img
-              className="hero-portrait"
-              src="/images/pravin.jpeg.png"
-              alt="Pravin R"
-            />
-            <div className="floating-tag tag-one">React Developer</div>
-            <div className="floating-tag tag-two">UI · Responsive</div>
-            <div className="floating-tag tag-three">MERN Learner</div>
+            <div className="hero-image-wrapper">
+              <div className="hero-image-glow" aria-hidden="true"></div>
+              <div className="hero-image">
+                <img
+                  src="/images/pravin.jpeg.png"
+                  alt="Pravin R - Frontend Developer"
+                />
+              </div>
+              <div className="hero-floating-card hero-card-top">
+                <span aria-hidden="true">⚛️</span> React Developer
+              </div>
+              <div className="hero-floating-card hero-card-bottom">
+                <span aria-hidden="true">✦</span> UI · Responsive
+              </div>
+            </div>
           </div>
         </section>
 
