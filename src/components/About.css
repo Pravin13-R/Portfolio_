@@ -1,0 +1,157 @@
+
+.about-section {
+  padding: 100px 7%;
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  margin-bottom: 40px;
+}
+
+.about-eyebrow {
+  color: #245bfa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-heading h2 {
+  margin: 12px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(34px, 4vw, 48px);
+  color: #101b35;
+  letter-spacing: -1.5px;
+}
+
+.about-heading h2 span {
+  color: #245bfa;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.about-text h3 {
+  margin: 0 0 20px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.35;
+  color: #101b35;
+}
+
+.about-text h3 span {
+  color: #245bfa;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+  color: #64718b;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Interest tags */
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.about-tags span {
+  padding: 9px 14px;
+  border: 1px solid #e1e8f7;
+  border-radius: 30px;
+  background: #f5f8ff;
+  color: #33466c;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.about-tags span:hover {
+  background: #245bfa;
+  color: #ffffff;
+  border-color: #245bfa;
+  transform: translateY(-3px);
+}
+
+/* Professional information */
+
+.about-info {
+  padding: 25px;
+  background: #f8faff;
+  border: 1px solid #e5eaf5;
+  border-radius: 18px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5eaf5;
+}
+
+.info-item:first-child {
+  padding-top: 0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  color: #7b88a2;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-value {
+  color: #101b35;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-section {
+    padding: 75px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 5%;
+  }
+
+  .about-info {
+    padding: 20px;
+  }
+
+  .about-text h3 {
+    font-size: 27px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,328 @@
+
+.skills-section {
+  position: relative;
+  padding: 100px 7%;
+  background: #f6f8fc;
+  overflow: hidden;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.skills-eyebrow {
+  display: inline-block;
+  color: #245bfa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.skills-heading h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: #101b35;
+  margin: 0 0 15px;
+}
+
+.skills-heading h2 span {
+  color: #245bfa;
+}
+
+.skills-heading p {
+  max-width: 520px;
+  color: #64718b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Bento Layout */
+
+.skills-bento {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 16px;
+}
+
+/* Individual Bento Card */
+
+.skill-bento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f2;
+  border-radius: 22px;
+
+  box-shadow: 0 10px 35px rgba(26, 50, 100, 0.04);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.skill-bento-card:hover {
+  transform: translateY(-7px);
+  border-color: #c8d6ff;
+  box-shadow: 0 20px 45px rgba(36, 91, 250, 0.12);
+}
+
+/* Bento Card Sizes */
+
+.skill-bento-card.react {
+  grid-column: span 2;
+}
+
+.skill-bento-card.javascript {
+  grid-column: span 2;
+}
+
+.skill-bento-card.html,
+.skill-bento-card.css,
+.skill-bento-card.bootstrap,
+.skill-bento-card.git,
+.skill-bento-card.github,
+.skill-bento-card.api {
+  grid-column: span 1;
+}
+
+/* Card Header */
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #e8efff,
+    #f0eaff
+  );
+
+  color: #245bfa;
+
+  font-size: 23px;
+  font-weight: 800;
+
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.skill-number {
+  font-size: 12px;
+  font-weight: 700;
+  color: #a0abc0;
+}
+
+/* Card Content */
+
+.skill-card-content {
+  margin-top: 16px;
+}
+
+.skill-category {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #7b88a2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skill-card-content h3 {
+  margin: 0 0 8px;
+
+  color: #101b35;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.skill-card-content p {
+  margin: 0;
+
+  color: #64718b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Card Footer */
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 16px;
+
+  color: #245bfa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.skill-arrow {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #f0f4ff;
+
+  font-size: 16px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.skill-bento-card:hover .skill-arrow {
+  transform: rotate(45deg);
+  background: #e2eaff;
+}
+
+/* Skill-specific Accent Colors */
+
+.skill-bento-card.react .skill-icon {
+  background: #e4f5ff;
+  color: #149eca;
+}
+
+.skill-bento-card.javascript .skill-icon {
+  background: #fff7d6;
+  color: #a88700;
+}
+
+.skill-bento-card.html .skill-icon {
+  background: #fff0e8;
+  color: #e45b2c;
+}
+
+.skill-bento-card.css .skill-icon {
+  background: #e9f0ff;
+  color: #245bfa;
+}
+
+.skill-bento-card.bootstrap .skill-icon {
+  background: #f0eaff;
+  color: #7952c8;
+}
+
+.skill-bento-card.git .skill-icon {
+  background: #fff0e9;
+  color: #e65b35;
+}
+
+.skill-bento-card.github .skill-icon {
+  background: #edf0f5;
+  color: #101b35;
+}
+
+.skill-bento-card.api .skill-icon {
+  background: #e6fff5;
+  color: #0b9c72;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .skills-bento {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skill-bento-card.react {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .skill-bento-card.javascript {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-section {
+    padding: 70px 5%;
+  }
+
+  .skills-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(210px, auto);
+    gap: 14px;
+  }
+
+  .skill-bento-card.react,
+  .skill-bento-card.javascript {
+    grid-column: span 2;
+  }
+
+  .skill-bento-card.react {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-bento-card.react,
+  .skill-bento-card.javascript,
+  .skill-bento-card.html,
+  .skill-bento-card.css,
+  .skill-bento-card.bootstrap,
+  .skill-bento-card.git,
+  .skill-bento-card.github,
+  .skill-bento-card.api {
+    grid-column: span 1;
+  }
+
+  .skill-bento-card {
+    min-height: 210px;
+  }
+
+  .skills-heading h2 {
+    font-size: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-bento-card,
+  .skill-arrow {
+    transition: none;
+  }
+
+  .skill-bento-card:hover {
+    transform: none;
+  }
+}
