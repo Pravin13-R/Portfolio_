@@ -43,35 +43,30 @@ export default function About() {
 
           <div className="about-info">
             <div className="info-item">
-              <span className="info-label">Name</span>
-              <span className="info-value">Pravin R</span>
-            </div>
-
-            <div className="info-item">
               <span className="info-label">Education</span>
               <span className="info-value">
-                B.E. Mechanical Engineering
+                B.E. 2026, Mahendra Engineering College
               </span>
             </div>
 
             <div className="info-item">
-              <span className="info-label">Specialization</span>
+              <span className="info-label">Based in</span>
               <span className="info-value">
-                Frontend Development
+                Tamil Nadu, India
               </span>
             </div>
 
             <div className="info-item">
-              <span className="info-label">Currently Learning</span>
+              <span className="info-label">Open to</span>
               <span className="info-value">
-                MERN Stack
+                Frontend roles, internships, remote work
               </span>
             </div>
 
             <div className="info-item">
-              <span className="info-label">Career Goal</span>
+              <span className="info-label">Learning now</span>
               <span className="info-value">
-                Frontend Developer
+                MERN stack at LiveWire Institute
               </span>
             </div>
           </div>

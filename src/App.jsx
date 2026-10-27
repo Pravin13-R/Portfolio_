@@ -4,6 +4,7 @@ import "./styles.css";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact.jsx";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 
 const projects = [
@@ -161,8 +162,8 @@ export default function App() {
         <nav>
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -180,14 +181,20 @@ export default function App() {
             <h1>
               Hi, I'm
               <br />
-              <span>Pravin R.</span>
+              <span>Pravin R</span>
             </h1>
 
             <p className="hero-description">
-              I build modern, responsive web interfaces with React
-              and JavaScript. I enjoy turning ideas into clear,
-              user-friendly digital experiences.
+              I build clean, responsive web applications using React.js and
+              JavaScript. From recruitment dashboards to job portals and resume
+              builders, I focus on creating intuitive user experiences and
+              practical solutions.
             </p>
+
+            <div className="hero-open-chip">
+              <span aria-hidden="true"></span>
+              Open to Frontend Roles
+            </div>
 
             <div className="hero-buttons">
               <a href="#projects" className="button primary">
@@ -196,6 +203,33 @@ export default function App() {
 
               <a href="/resume.pdf" download className="button secondary">
                 Download Resume ↓
+              </a>
+            </div>
+
+            <div className="hero-social-links" aria-label="Social profiles">
+              <a
+                href="https://github.com/Pravin13-R"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub profile"
+              >
+                <Github size={20} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pravin-r-dev"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <Linkedin size={20} aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.instagram.com/ix_pravin_/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram profile"
+              >
+                <Instagram size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -248,7 +282,27 @@ export default function App() {
       </main>
 
       <footer>
-        © 2026 Pravin R · Built with React
+        <div className="footer-content">
+          <span>© 2026 Pravin R · Built with React</span>
+          <div className="footer-social-links" aria-label="Social profiles">
+            <a
+              href="https://github.com/Pravin13-R"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub profile"
+            >
+              <Github size={18} aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pravin-r-dev"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn profile"
+            >
+              <Linkedin size={18} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
       </footer>
     </>
   );
