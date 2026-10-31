@@ -1,6 +1,4 @@
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
-
 :root {
   --bg: #f6f8fc;
   --surface: #ffffff;
@@ -39,7 +37,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(rgba(246, 248, 252, 0.55), rgba(246, 248, 252, 0.55)),
+    url("/images/Background.png") center / cover fixed;
   color: var(--ink);
   font-family: "DM Sans", sans-serif;
 }
@@ -372,6 +372,10 @@ nav a:hover {
   padding: 80px 7%;
 }
 
+#projects {
+  background: transparent;
+}
+
 .section h2 {
   font-size: clamp(32px, 4vw, 46px);
   margin: 10px 0 30px;
@@ -450,7 +454,6 @@ nav a:hover {
   transition: transform 0.75s cubic-bezier(0.2, 0.75, 0.25, 1);
 }
 
-.flip-card:hover .flip-inner,
 .flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }

@@ -1,61 +1,71 @@
 
 import React from "react";
+import {
+  siBootstrap,
+  siCss,
+  siGit,
+  siGithub,
+  siHtml5,
+  siJavascript,
+  siReact,
+  siSwagger,
+} from "simple-icons";
 import "./Skills.css";
 
 const skills = [
   {
     name: "React.js",
     category: "Frontend Library",
-    icon: "⚛",
+    icon: siReact,
     className: "react",
     description: "Building reusable and interactive UI components.",
   },
   {
     name: "JavaScript",
     category: "Programming Language",
-    icon: "JS",
+    icon: siJavascript,
     className: "javascript",
     description: "Creating dynamic and functional web experiences.",
   },
   {
     name: "HTML5",
     category: "Markup",
-    icon: "5",
+    icon: siHtml5,
     className: "html",
     description: "Structuring accessible web content.",
   },
   {
     name: "CSS3",
     category: "Styling",
-    icon: "3",
+    icon: siCss,
     className: "css",
     description: "Designing responsive and modern interfaces.",
   },
   {
     name: "Bootstrap",
     category: "CSS Framework",
-    icon: "B",
+    icon: siBootstrap,
     className: "bootstrap",
     description: "Building responsive layouts with UI components.",
   },
   {
     name: "Git",
     category: "Version Control",
-    icon: "⌘",
+    icon: siGit,
     className: "git",
     description: "Tracking code changes and managing versions.",
   },
   {
     name: "GitHub",
     category: "Code Hosting",
-    icon: "GH",
+    icon: siGithub,
     className: "github",
     description: "Collaborating and hosting development projects.",
   },
   {
     name: "REST APIs",
     category: "API Integration",
-    icon: "↔",
+    icon: siSwagger,
     className: "api",
     description: "Connecting frontend applications with APIs.",
   },
@@ -86,7 +96,13 @@ export default function Skills() {
             >
               <div className="skill-card-top">
                 <div className="skill-icon">
-                  {skill.icon}
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d={skill.icon.path} />
+                  </svg>
                 </div>
 
                 <span className="skill-number">

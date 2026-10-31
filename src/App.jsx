@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import "./styles.css";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact.jsx";
@@ -10,7 +9,7 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 const projects = [
   {
     title: "HireFlow",
-    image: "/images/HireFlow%20Recruitment.png",
+    image: "/images/HireFlow%20Recruitment.webp",
     category: "Recruitment Management System",
     description:
       "A recruitment management application designed to simplify candidate management and organize the hiring process through a clean, user-friendly interface.",
@@ -30,7 +29,7 @@ const projects = [
 
   {
     title: "Job Portal",
-    image: "/images/Job%20Portal.png",
+    image: "/images/Job%20Portal.webp",
     category: "Job Listing & Application Platform",
     description:
       "A job portal application that helps users explore job opportunities through an organized interface, making job discovery and application workflows easier.",
@@ -50,7 +49,7 @@ const projects = [
 
   {
     title: "Resume Builder",
-    image: "/images/Resume%20Builder.png",
+    image: "/images/Resume%20Builder.webp",
     category: "Resume Creation Application",
     description:
       "A resume builder application that allows users to organize their professional information and create structured resumes through an intuitive interface.",
@@ -89,7 +88,14 @@ function ProjectCard({ project }) {
         {/* FRONT */}
         <div className="card-face card-front">
           <div className="project-image">
-            <img src={project.image} alt={`${project.title} project preview`} />
+            <img
+              src={project.image}
+              alt={`${project.title} project preview`}
+              width="900"
+              height="507"
+              loading="lazy"
+              decoding="async"
+            />
             <span>{project.title}</span>
           </div>
 
@@ -201,7 +207,7 @@ export default function App() {
                 Explore Projects ↗
               </a>
 
-              <a href="/resume.pdf" download className="button secondary">
+              <a href="/Pravin_R.pdf" download className="button secondary">
                 Download Resume ↓
               </a>
             </div>
@@ -239,8 +245,12 @@ export default function App() {
               <div className="hero-image-glow" aria-hidden="true"></div>
               <div className="hero-image">
                 <img
-                  src="/images/pravin.jpeg.png"
+                  src="/images/pravin.jpeg.webp"
                   alt="Pravin R - Frontend Developer"
+                  width="700"
+                  height="536"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
               <div className="hero-floating-card hero-card-top">
