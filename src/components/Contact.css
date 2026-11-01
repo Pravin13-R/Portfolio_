@@ -6,7 +6,7 @@
 .contact-section {
   position: relative;
   overflow: hidden;
-  padding: 110px 7% 0;
+  padding: 70px 7% 0;
   background: transparent;
   color: #111b35;
   font-family: inherit;
@@ -64,7 +64,7 @@
 
 .contact-heading {
   max-width: 760px;
-  margin-bottom: 65px;
+  margin-bottom: 45px;
 }
 
 .contact-eyebrow {
@@ -465,7 +465,7 @@
 
 @media (max-width: 900px) {
   .contact-section {
-    padding: 85px 5% 0;
+    padding: 65px 5% 0;
   }
 
   .contact-grid {
@@ -490,7 +490,7 @@
 
 @media (max-width: 560px) {
   .contact-section {
-    padding: 65px 20px 0;
+    padding: 50px 20px 0;
   }
 
   .contact-heading h2 {

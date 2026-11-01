@@ -1,7 +1,7 @@
 
 .skills-section {
   position: relative;
-  padding: 100px 7%;
+  padding: 70px 7%;
   background: transparent;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
 
 .skills-heading {
   max-width: 650px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 .skills-eyebrow {
@@ -181,42 +181,6 @@
   line-height: 1.6;
 }
 
-/* Card Footer */
-
-.skill-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 12px;
-
-  color: #245bfa;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.skill-arrow {
-  width: 26px;
-  height: 26px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 50%;
-  background: #f0f4ff;
-
-  font-size: 16px;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-.skill-bento-card:hover .skill-arrow {
-  transform: rotate(45deg);
-  background: #e2eaff;
-}
-
 /* Skill-specific Accent Colors */
 
 .skill-bento-card.react .skill-icon {
@@ -278,7 +242,7 @@
 
 @media (max-width: 700px) {
   .skills-section {
-    padding: 70px 5%;
+    padding: 55px 5%;
   }
 
   .skills-bento {
@@ -323,8 +287,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skill-bento-card,
-  .skill-arrow {
+  .skill-bento-card {
     transition: none;
   }
 

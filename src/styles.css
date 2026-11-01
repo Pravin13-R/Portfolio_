@@ -41,7 +41,7 @@ body {
     linear-gradient(rgba(246, 248, 252, 0.55), rgba(246, 248, 252, 0.55)),
     url("/images/Background.png") center / cover fixed;
   color: var(--ink);
-  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -77,7 +77,7 @@ p {
 }
 
 .logo {
-  font: 700 25px "Space Grotesk";
+  font: 700 25px "Space Grotesk", sans-serif;
 }
 
 .logo span {
@@ -123,8 +123,8 @@ nav a:hover {
 /* Hero */
 
 .hero {
-  min-height: 600px;
-  padding: 80px 7%;
+  min-height: 540px;
+  padding: 60px 7%;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
@@ -138,13 +138,16 @@ nav a:hover {
   letter-spacing: 2px;
 }
 
-.hero h1 {
-  font-size: clamp(48px, 7vw, 78px);
+.hero-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
   letter-spacing: -3px;
+  color: #111b35;
   margin: 15px 0;
 }
 
-.hero h1 span {
+.hero-title span {
   color: var(--blue);
 }
 
@@ -285,41 +288,6 @@ nav a:hover {
   transform: scale(1.035);
 }
 
-.hero-floating-card {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 14px 18px;
-  border: 1px solid rgba(220, 228, 245, 0.95);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #111b35;
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
-  box-shadow: 0 12px 35px rgba(17, 27, 53, 0.08);
-  backdrop-filter: blur(12px);
-}
-
-.hero-floating-card span {
-  color: #285dff;
-  font-size: 17px;
-}
-
-.hero-card-top {
-  top: 10%;
-  left: -10%;
-  animation: cardFloat 4s ease-in-out infinite;
-}
-
-.hero-card-bottom {
-  right: -10%;
-  bottom: 12%;
-  animation: cardFloat 4.5s ease-in-out infinite reverse;
-}
-
 @keyframes heroFloat {
   0%,
   100% {
@@ -328,17 +296,6 @@ nav a:hover {
 
   50% {
     transform: translateY(-12px);
-  }
-}
-
-@keyframes cardFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
   }
 }
 
@@ -369,7 +326,7 @@ nav a:hover {
 /* Sections */
 
 .section {
-  padding: 80px 7%;
+  padding: 60px 7%;
 }
 
 #projects {
@@ -405,7 +362,7 @@ nav a:hover {
   background: linear-gradient(135deg, #dce7ff, #eee7ff);
   color: var(--blue);
   border-radius: 20px;
-  font: 700 30px "Space Grotesk";
+  font: 700 30px "Space Grotesk", sans-serif;
 }
 
 .about-details {
@@ -503,7 +460,7 @@ nav a:hover {
   border-radius: 8px;
   background: #ffffffed;
   color: var(--ink);
-  font: 700 13px "Space Grotesk";
+  font: 700 13px "Space Grotesk", sans-serif;
 }
 
 .card-front h3 {
@@ -690,15 +647,11 @@ footer {
 
   .hero,
   .section {
-    padding: 55px 5%;
+    padding: 50px 5%;
   }
 
   .footer-content {
     flex-wrap: wrap;
-  }
-
-  .hero h1 {
-    font-size: 50px;
   }
 
   .skills-grid,
@@ -722,19 +675,6 @@ footer {
     width: min(300px, 72vw);
   }
 
-  .hero-floating-card {
-    padding: 10px 12px;
-    font-size: 11px;
-  }
-
-  .hero-card-top {
-    left: -3%;
-  }
-
-  .hero-card-bottom {
-    right: -3%;
-  }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -748,8 +688,6 @@ footer {
 
   .hero-image-wrapper,
   .hero-image-glow,
-  .hero-card-top,
-  .hero-card-bottom,
   .hero-open-chip {
     animation: none;
   }

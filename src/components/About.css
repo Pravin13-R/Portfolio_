@@ -1,6 +1,6 @@
 
 .about-section {
-  padding: 100px 7%;
+  padding: 70px 7%;
   background: transparent;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .about-heading {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .about-eyebrow {
@@ -134,13 +134,13 @@
   }
 
   .about-section {
-    padding: 75px 5%;
+    padding: 60px 5%;
   }
 }
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 60px 5%;
+    padding: 50px 5%;
   }
 
   .about-info {

@@ -182,9 +182,9 @@ export default function App() {
         {/* HERO */}
         <section className="hero" id="home">
           <div className="hero-content">
-            <p className="eyebrow">REACT · FRONTEND DEVELOPER</p>
+            <p className="eyebrow">FRONTEND DEVELOPER</p>
 
-            <h1>
+            <h1 className="hero-title">
               Hi, I'm
               <br />
               <span>Pravin R</span>
@@ -199,7 +199,7 @@ export default function App() {
 
             <div className="hero-open-chip">
               <span aria-hidden="true"></span>
-              Open to Frontend Roles
+              Available for opportunities
             </div>
 
             <div className="hero-buttons">
@@ -252,12 +252,6 @@ export default function App() {
                   fetchPriority="high"
                   decoding="async"
                 />
-              </div>
-              <div className="hero-floating-card hero-card-top">
-                <span aria-hidden="true">⚛️</span> React Developer
-              </div>
-              <div className="hero-floating-card hero-card-bottom">
-                <span aria-hidden="true">✦</span> UI · Responsive
               </div>
             </div>
           </div>

@@ -120,10 +120,6 @@ export default function Skills() {
                 <p>{skill.description}</p>
               </div>
 
-              <div className="skill-card-footer">
-                <span>Explore skill</span>
-                <span className="skill-arrow">↗</span>
-              </div>
             </article>
           ))}
         </div>
