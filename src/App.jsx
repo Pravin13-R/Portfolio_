@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact.jsx";
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 
 const projects = [
@@ -24,7 +24,7 @@ const projects = [
     tech: ["React.js", "JavaScript", "Bootstrap", "CSS"],
 
     github: "https://github.com/Pravin13-R/Hire_Flow",
-    demo: "",
+    demo: "https://hireflowcrm.netlify.app/",
   },
 
   {
@@ -41,7 +41,7 @@ const projects = [
       "Responsive Design",
     ],
 
-    tech: ["React.js", "JavaScript", "CSS", "REST APIs"],
+    tech: ["JavaScript", "CSS", "REST APIs"],
 
     github: "https://github.com/Pravin13-R/Job-Portal",
     demo: "",
@@ -61,10 +61,10 @@ const projects = [
       "User-Friendly Interface",
     ],
 
-    tech: ["React.js", "JavaScript", "CSS", "HTML5"],
+    tech: ["JavaScript", "CSS", "HTML5"],
 
     github: "https://github.com/Pravin13-R/Resume-Builder",
-    demo: "",
+    demo: "https://resume-builder-five-iota-38.vercel.app/",
   },
 ];
 
@@ -191,10 +191,8 @@ export default function App() {
             </h1>
 
             <p className="hero-description">
-              I build clean, responsive web applications using React.js and
-              JavaScript. From recruitment dashboards to job portals and resume
-              builders, I focus on creating intuitive user experiences and
-              practical solutions.
+              I build dashboards, job portals, and forms with React and JavaScript. My
+              engineering background shapes how I debug problems and design interfaces.
             </p>
 
             <div className="hero-open-chip">
@@ -230,12 +228,10 @@ export default function App() {
                 <Linkedin size={20} aria-hidden="true" />
               </a>
               <a
-                href="https://www.instagram.com/ix_pravin_/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram profile"
+                href="mailto:rameshpravin1@gmail.com"
+                aria-label="Email Pravin"
               >
-                <Instagram size={20} aria-hidden="true" />
+                <Mail size={20} aria-hidden="true" />
               </a>
             </div>
           </div>

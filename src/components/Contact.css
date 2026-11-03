@@ -9,7 +9,6 @@
   padding: 70px 7% 0;
   background: transparent;
   color: #111b35;
-  font-family: inherit;
 }
 
 .contact-section,
@@ -340,7 +339,6 @@
   outline: none;
   background: #f9faff;
   color: #111b35;
-  font-family: inherit;
   font-size: 13px;
   transition:
     border-color 0.25s ease,
@@ -384,7 +382,6 @@
   border-radius: 11px;
   background: linear-gradient(110deg, #285dff, #6555f5);
   color: #fff;
-  font-family: inherit;
   font-size: 14px;
   font-weight: 750;
   cursor: pointer;

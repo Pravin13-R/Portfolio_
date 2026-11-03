@@ -39,6 +39,15 @@ export default function About() {
               <span>UI Design</span>
               <span>Problem Solving</span>
             </div>
+
+            <a
+              href="/Pravin_R.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="about-resume-link"
+            >
+              View Resume ↗
+            </a>
           </div>
 
           <div className="about-info">
