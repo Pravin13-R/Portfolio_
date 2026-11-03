@@ -41,7 +41,7 @@ export default function About() {
             </div>
 
             <a
-              href="/Pravin_R.pdf"
+              href="/Pravin_R_Frontend_Developer_..pdf"
               target="_blank"
               rel="noreferrer"
               className="about-resume-link"

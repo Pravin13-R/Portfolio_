@@ -205,7 +205,11 @@ export default function App() {
                 Explore Projects ↗
               </a>
 
-              <a href="/Pravin_R.pdf" download className="button secondary">
+              <a
+                href="/Pravin_R_Frontend_Developer_..pdf"
+                download
+                className="button secondary"
+              >
                 Download Resume ↓
               </a>
             </div>
